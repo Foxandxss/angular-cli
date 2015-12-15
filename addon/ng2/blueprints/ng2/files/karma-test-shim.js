@@ -13,7 +13,7 @@ System.config({
         .filter(onlyAppFiles)
         .reduce(function(pathsMapping, appPath) {
           var moduleName = appPath.replace(/^\/base\/dist\/app\//, './').replace(/\.js$/, '');
-          pathsMapping[moduleName] = appPath + '?' + window.__karma__.files[appPath]
+          pathsMapping[moduleName] = appPath + '?' + window.__karma__.files[appPath];
         return pathsMapping;
       }, {})
     }
